@@ -18,6 +18,7 @@ body{
     justify-content: right;
     align-items: center;
     color: var(--text-color);
+    animation: backgroundAnimation 21s infinite alternate;
 
 }
 /* card */
@@ -33,6 +34,8 @@ body{
     backdrop-filter: blur(10px);
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+
 }
 
 /* form */
@@ -104,5 +107,46 @@ body{
     margin-left: -270px;
   }
   
+  /* animation */
+  @keyframes backgroundAnimation {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 0 100%;
+    }
+    100% {
+        background-position: 0 0;
+    }
+  }
   
+
+/* Responsive  */
+
+@media (min-width:448px) {
+    .card{
+        margin: 20px auto;
+        width: 90%;
+        min-width: 400px;
+    }
+}
+
+@media (min-width: 628px) {
+    .card {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 50px;
+        left: 50px;
+        padding: 40px;
+        width: auto;
+        max-width: none;
+        min-width: 500px;
+        display: flex;
+        border-radius: 0;
+        flex-direction: column;
+        justify-content: right;
+    }
+}
+
 
